@@ -1,0 +1,17 @@
+a {
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+}
+#container {
+    display: flex;
+}
+#left {
+    width: 30%;
+    float: left;
+}
+#right {
+    width: 70%;
+}
+.clear {
+    clear: both;
+}

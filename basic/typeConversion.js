@@ -1,0 +1,43 @@
+'use strict';
+function typeConversion() {
+    var content = '';
+    content = addLine(content, '1. Constructor properties:', 0, true);
+    content = addLine(content, '\'pl\'.constructor is ' + 'pl'.constructor, 1);
+    content = addLine(content, '(12).constructor is ' + (12).constructor, 1);
+    content = addLine(content, 'true.constructor is ' + true.constructor, 1);
+    content = addLine(content, '[1,2].constructor is ' + [1,2].constructor, 1);
+    content = addLine(content, '{}.constructor is ' + {}.constructor, 1);
+    content = addLine(content, 'function(){}.constructor is ' + function(){}.constructor, 1);
+    content = addLine(content, 'new Date().constructor is ' + new Date().constructor, 1);
+    content = addLine(content, '2. Number to String:', 0, true);
+    content = addLine(content, 'new String(123) is ' + new String(123) + ' of type ' + typeof new String(123), 1);
+    content = addLine(content, 'new String(1.3) is ' + new String(1.3) + ' of type ' + typeof new String(1.3), 1);
+    content = addLine(content, '(123).toString() is ' + (123).toString() + ' of type ' + typeof (123).toString(), 1);
+    content = addLine(content, '(1.3).toString() is ' + (1.3).toString() + ' of type ' + typeof (1.3).toString(), 1);
+    content = addLine(content, '(1.3).toExponential() is ' + (1.3).toExponential() + ' of type ' + typeof (1.3).toExponential(), 1);
+    content = addLine(content, '(1.3).toFixed() is ' + (1.3).toFixed() + ' of type ' + typeof (1.3).toFixed(), 1);
+    content = addLine(content, '(1.3).toPrecision() is ' + (1.3).toPrecision() + ' of type ' + typeof (1.3).toPrecision(), 1);
+    content = addLine(content, '3. Boolean to String:', 0, true);
+    content = addLine(content, 'new Boolean(true) is ' + new Boolean(true) + ' of type ' + typeof new Boolean(true), 1);
+    content = addLine(content, 'true.toString() is ' + true.toString() + ' of type ' + typeof true.toString(), 1);
+    content = addLine(content, '4. String to Number:', 0, true);
+    content = addLine(content, 'new Number(\'123\') is ' + new Number('123') + ' of type ' + typeof new Number('123'), 1);
+    content = addLine(content, 'new Number(\'\') is ' + new Number('') + ' of type ' + typeof new Number(''), 1);
+    content = addLine(content, 'parseInt(\'123\') is ' + parseInt('123') + ' of type ' + typeof parseInt('123'), 1);
+    content = addLine(content, 'parseFloat(\'1.3\') is ' + parseFloat('1.3') + ' of type ' + typeof parseFloat('1.3'), 1);
+    content = addLine(content, '(+ \'5\') is ' + (+ '5') + ' of type ' + typeof (+ '5'), 1);
+    content = addLine(content, '5. Boolean to Number:', 0, true);
+    content = addLine(content, 'new Number(true) is ' + new Number(true) + ' of type ' + typeof new Number(true), 1);
+    content = addLine(content, 'new Number(false) is ' + new Number(false) + ' of type ' + typeof new Number(false), 1);
+    content = addLine(content, '6. String to Boolean:', 0, true);
+    content = addLine(content, 'new Boolean(\'\') is ' + new Boolean('') + ' of type ' + typeof new Boolean(''), 1);
+    content = addLine(content, 'new Boolean(\' \') is ' + new Boolean(' ') + ' of type ' + typeof new Boolean(' '), 1);
+    content = addLine(content, 'new Boolean(\'str\') is ' + new Boolean('str') + ' of type ' + typeof new Boolean('str'), 1);
+    content = addLine(content, '7. Number to Boolean:', 0, true);
+    content = addLine(content, 'new Boolean(0) is ' + new Boolean(0) + ' of type ' + typeof new Boolean(0), 1);
+    content = addLine(content, 'new Boolean(1) is ' + new Boolean(1) + ' of type ' + typeof new Boolean(1), 1);
+    content = addLine(content, 'new Boolean(Infinity) is ' + new Boolean(Infinity) + ' of type ' + typeof new Boolean(Infinity), 1);
+    content = addLine(content, 'new Boolean(NaN) is ' + new Boolean(NaN) + ' of type ' + typeof new Boolean(NaN), 1);
+
+    return content;
+}
