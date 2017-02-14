@@ -1,0 +1,37 @@
+function strings() {
+    var content = '';
+    content = addLine(content, '1. String primitive:', 0, true);
+    var strP = 'string';
+    content = addLine(content, 'var strP = ' + '\'' + strP + '\';', 1);
+    content = addLine(content, '2. String object (not recommended):', 0, true);
+    var strO = new String('string');
+    content = addLine(content, 'var strO = ' + '\'' + strO + '\';', 1);
+    content = addLine(content, '3. String equality:', 0, true);
+    var equals = strP == strO;
+    content = addLine(content, 'strP == strO is ' + equals, 1);
+    equals = strP === strO;
+    content = addLine(content, 'strP === strO is ' + equals, 1);
+    equals = new String('string') == new String('string');
+    content = addLine(content, 'new String(\'string\') == new String(\'string\') is ' + equals, 1);
+    equals = new String('string') === new String('string');
+    content = addLine(content, 'new String(\'string\') === new String(\'string\') is ' + equals, 1);
+    content = addLine(content, '4. String methods:', 0, true);
+    var str = 'John is 15 years old';
+    content = addLine(content, '\'' + str + '\'' + '.length is ' + str.length, 1);
+    content = addLine(content, '\'' + str + '\'' + '.indexOf(\'years\') is ' + str.indexOf('years'), 1);
+    content = addLine(content, '\'' + str + '\'' + '.search(\'years\') is ' + str.search('years'),1 );
+    content = addLine(content, '\'' + str + '\'' + '.lastIndexOf(\'o\') is ' + str.lastIndexOf('o'), 1);
+    content = addLine(content, '\'' + str + '\'' + '.slice(11,15) is ' + str.slice(11,15), 1);
+    content = addLine(content, '\'' + str + '\'' + '.slice(11) is ' + str.slice(11), 1);
+    content = addLine(content, '\'' + str + '\'' + '.slice(-9) is ' + str.slice(-9), 1);
+    content = addLine(content, '\'' + str + '\'' + '.substring(11,15) is ' + str.substring(11,15), 1);
+    content = addLine(content, '\'' + str + '\'' + '.substring(11) is ' + str.substring(11), 1);
+    content = addLine(content, '\'' + str + '\'' + '.substr(11,4) is ' + str.substr(11,4), 1);
+    content = addLine(content, '\'' + str + '\'' + '.substr(-9,4) is ' + str.substr(-9,4), 1);
+    content = addLine(content, '\'' + str + '\'' + '.toUpperCase() is ' + str.toUpperCase(), 1);
+    content = addLine(content, '\'' + str + '\'' + '.toLowerCase() is ' + str.toLowerCase(), 1);
+    content = addLine(content, '\'' + str + '\'' + '.charAt(11) is ' + str.charAt(11), 1);
+    content = addLine(content, '\'' + str + '\'' + '.charCodeAt(11) is ' + str.charCodeAt(11), 1);
+    content = addLine(content, '\'' + str + '\'' + '.split(\' \') is ' + str.split(' '), 1);
+    return content;
+}

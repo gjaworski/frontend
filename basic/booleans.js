@@ -1,0 +1,32 @@
+'use strict';
+function booleans() {
+    var content = '';
+    content = addLine(content, '1. Boolean primitive:', 0, true);
+    var bool1 = true;
+    var bool2 = false;
+    content = addLine(content, 'var bool1 = true is ' + bool1, 1);
+    content = addLine(content, 'var bool2 = false is ' + bool2, 1);
+    content = addLine(content, '2. Boolean object:', 0, true);
+    bool1 = new Boolean(true);
+    bool2 = new Boolean(false);
+    content = addLine(content, 'var bool1 = new Boolean(true) is ' + bool1, 1);
+    content = addLine(content, 'var bool2 = new Boolean(false) is ' + bool2, 1);
+    content = addLine(content, '3. Boolean equality:', 0, true);
+    content = addLine(content, 'true == true is ' + (true == true), 1);
+    content = addLine(content, 'true === true is ' + (true === true), 1);
+    content = addLine(content, 'true == new Boolean(true) is ' + (true == new Boolean(true)), 1);
+    content = addLine(content, 'true === new Boolean(true) is ' + (true === new Boolean(true)), 1);
+    content = addLine(content, '4. False:', 0, true);
+    content = addLine(content, 'new Boolean(false) is ' + new Boolean(false), 1);
+    content = addLine(content, 'new Boolean(0) is ' + new Boolean(0), 1);
+    content = addLine(content, 'new Boolean("") is ' + new Boolean(""), 1);
+    content = addLine(content, 'new Boolean(undefined) is ' + new Boolean(undefined), 1);
+    content = addLine(content, 'new Boolean(NaN) is ' + new Boolean(NaN), 1);
+    content = addLine(content, '5. True:', 0, true);
+    content = addLine(content, 'new Boolean(true) is ' + new Boolean(true), 1);
+    content = addLine(content, 'new Boolean(\'string\') is ' + new Boolean('string'), 1);
+    content = addLine(content, 'new Boolean(123) is ' + new Boolean(123), 1);
+    content = addLine(content, 'new Boolean({}) is ' + new Boolean({}), 1);
+    content = addLine(content, 'new Boolean([]) is ' + new Boolean([]), 1);
+    return content;
+}

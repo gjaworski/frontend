@@ -1,0 +1,32 @@
+'use strict';
+function dates() {
+    var content = '';
+    content = addLine(content, '1. Date object creation:', 0, true);
+    content = addLine(content, 'new Date() is ' + new Date(), 1);
+    content = addLine(content, 'new Date(100000) is ' + new Date(100000), 1);
+    content = addLine(content, 'new Date(1986, 10, 28) is ' + new Date(1986, 10, 28), 1);
+    content = addLine(content, 'new Date(1986, 10, 28, 14, 15, 30) is ' + new Date(1986, 10, 28, 14, 15, 30), 1);
+    content = addLine(content, 'new Date(\'October 13, 2014 11:13:00\') is ' + new Date('October 13, 2014 11:13:00'), 1);
+    content = addLine(content, '2. Date methods:', 0, true);
+    var date = new Date();
+    content = addLine(content, 'date.toString() is ' + date.toString(), 1);
+    content = addLine(content, 'date.toUTCString() is ' + date.toUTCString(), 1);
+    content = addLine(content, 'date.toDateString() is ' + date.toDateString(), 1);
+    content = addLine(content, 'date.getDate() is ' + date.getDate(), 1);
+    content = addLine(content, 'date.getTime() is ' + date.getTime(), 1);
+    content = addLine(content, 'date.getFullYear() is ' + date.getFullYear(), 1);
+    content = addLine(content, 'date.getMonth() is ' + date.getMonth(), 1);
+    content = addLine(content, 'date.getDay() is ' + date.getDay(), 1);
+    content = addLine(content, 'date.getHours() is ' + date.getHours(), 1);
+    content = addLine(content, 'date.getMinutes() is ' + date.getMinutes(), 1);
+    content = addLine(content, 'date.getSeconds() is ' + date.getSeconds(), 1);
+    content = addLine(content, 'date.getMilliseconds() is ' + date.getMilliseconds(), 1);
+    content = addLine(content, 'date.getUTCFullYear() is ' + date.getUTCFullYear(), 1);
+    content = addLine(content, 'date.getUTCMonth() is ' + date.getUTCMonth(), 1);
+    content = addLine(content, 'date.getUTCDay() is ' + date.getUTCDay(), 1);
+    content = addLine(content, 'date.getUTCHours() is ' + date.getUTCHours(), 1);
+    content = addLine(content, 'date.getUTCMinutes() is ' + date.getUTCMinutes(), 1);
+    content = addLine(content, 'date.getUTCSeconds() is ' + date.getUTCSeconds(), 1);
+    content = addLine(content, 'date.getUTCMilliseconds() is ' + date.getUTCMilliseconds(), 1);
+    return content;
+}
