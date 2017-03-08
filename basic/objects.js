@@ -1,0 +1,51 @@
+'use strict';
+function objects() {
+    var content = '';
+    content = addLine(content, '1. Javascript objects:', 0, true);
+    content = addLine(content, '* Booleans can be objects', 1);
+    content = addLine(content, '* Numbers can be objects', 1);
+    content = addLine(content, '* Strings can be objects', 1);
+    content = addLine(content, '* Dates are always objects', 1);
+    content = addLine(content, '* Regular expressions are always objects', 1);
+    content = addLine(content, '* Arrays are always objects', 1);
+    content = addLine(content, '* Functions are always objects', 1);
+    content = addLine(content, '* Objects are always objects', 1);
+    content = addLine(content, '2. Objects are variables containing other variables', 0, true);
+    content = addLine(content, '3. Objects are containers for named values (properties) and methods', 0, true);
+    content = addLine(content, '4. Object creation:', 0, true);
+    var obj1 = {"name": "Grzegorz", "age": 30};
+    content = addLine(content, '* Using object literal:', 1);
+    content = addLine(content, 'var obj1 = {"name": "Grzegorz", "age": 30}', 2);
+    var obj2 = new Object();
+    obj2.name = "Grzegorz";
+    obj2.age = 30;
+    content = addLine(content, '* Using new keyword:', 1);
+    content = addLine(content, 'var obj2 = new Object();', 2);
+    content = addLine(content, 'obj2.name = "Grzegorz";', 2);
+    content = addLine(content, 'obj2.age = 30;', 2);
+    function Person(name, age) {
+        this.name = name;
+        this.age = name;
+    }
+    var obj3 = new Person("Grzegorz", 30);
+    content = addLine(content, '* Using constructor function:', 1);
+    content = addLine(content, 'function Person(name, age) {', 2);
+    content = addLine(content, 'this.name = name;', 3);
+    content = addLine(content, 'this.age = age;', 3);
+    content = addLine(content, '}', 2);
+    content = addLine(content, 'var obj3 = new Person("Grzegorz", 30)', 2);
+    content = addLine(content, '5. Keyword "this":', 0, true);
+    content = addLine(content, '* "this" is an object that owns current code', 1);
+    content = addLine(content, '* "this" used in a function points to an object that owns function', 1);
+    content = addLine(content, '* "this" used in a constructor points to a newly created object', 1);
+    content = addLine(content, '6. Built-in javascript constructors:', 0, true);
+    content = addLine(content, 'var c1 = new Object()   | {}', 1);
+    content = addLine(content, 'var c2 = new String()   | \'\'', 1);
+    content = addLine(content, 'var c3 = new Number()   | 0', 1);
+    content = addLine(content, 'var c4 = new Boolean()  | true', 1);
+    content = addLine(content, 'var c5 = new Array()    | []', 1);
+    content = addLine(content, 'var c6 = new RegExp()   | /()/', 1);
+    content = addLine(content, 'var c7 = new Function() | function(){}', 1);
+    content = addLine(content, 'var c8 = new Date()', 1);
+    return content;
+}
