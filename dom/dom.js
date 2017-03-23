@@ -1,0 +1,36 @@
+'use strict';
+function dom() {
+    var content = '';
+    content = addLine(content, '1. DOM (document object model) is a standard object model and programming interface for HTML. It defines:', 0, true);
+    content = addLine(content, '* HTML elements as objects', 1);
+    content = addLine(content, '* The properties of all HTML elements', 1);
+    content = addLine(content, '* The methods to access all HTML elements', 1);
+    content = addLine(content, '* The events for all HTML elements', 1);
+    content = addLine(content, '2. HTML DOM methods are actions that can be performed on HTML elements', 0, true);
+    content = addLine(content, '3. HTML DOM properties are values that can be set or changed', 0, true);
+    content = addLine(content, '4. HTML DOM document object is an owner of all objects on the page', 0, true);
+    content = addLine(content, '5. Finding HTML elements:', 0, true);
+    content = addLine(content, 'document.getElementById(\'sandbox\') is ' + document.getElementById('sandbox'), 1);
+    content = addLine(content, 'document.getElementById(\'description\') is ' + document.getElementById('description'), 1);
+    content = addLine(content, 'document.getElementsByTagName(\'div\') is ' + document.getElementsByTagName('div'), 1);
+    content = addLine(content, 'document.getElementsByClassName(\'container\') is ' + document.getElementsByClassName('container'), 1);
+    content = addLine(content, 'document.querySelectorAll(\'div.container\') is ' + document.querySelectorAll('div.container'), 1);
+    content = addLine(content, '5. Changing HTML elements:', 0, true);
+    content = addLine(content, 'var sandbox = document.getElementById(\'sandbox\')', 1);
+    var sandbox = document.getElementById('sandbox');
+    content = addHyperlink(content, 'sandbox.innerHTML=\'TEST TEXT\'', 1);
+    content = addHyperlink(content, 'sandbox.style=\'color: blue\'', 1);
+    content = addHyperlink(content, 'sandbox.setAttribute(\'style\', \'background-color: yellow;\')', 1);
+    content = addLine(content, '6. Adding and removing HTML elements:', 0, true);
+    var btn1 = document.createElement('button');
+    var btn2 = document.createElement('button');
+    btn1.id = 'btn1';
+    btn2.id = 'btn2';
+    btn1.appendChild(document.createTextNode('XXXXXXX'));
+    btn2.appendChild(document.createTextNode('YYYYYYY'));
+    content = addLine(content, 'var btn1 = document.createElement(\'button\');', 1);
+    content = addLine(content, 'var btn2 = document.createElement(\'button\');', 1);
+    content = addLine(content, 'btn1.appendChild(document.createTextNode(\'XXXXXXX\'));', 1);
+    content = addLine(content, 'btn2.appendChild(document.createTextNode(\'YYYYYYY\'));', 1);
+    return content;
+}

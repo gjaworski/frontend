@@ -1,0 +1,33 @@
+'use strict';
+function domEvents() {
+    var content = '';
+    content = addLine(content, '1. Mouse events:', 0, true);
+    content = addLine(content, '* onclick - user clicks on an element', 1);
+    content = addLine(content, '* oncontextmenu - user right clicks on an element', 1);
+    content = addLine(content, '* ondblclick - user double clicks on an element', 1);
+    content = addLine(content, '* onmousedown - user presses a mouse button over an element', 1);
+    content = addLine(content, '* onmouseenter - pointer is moved onto an element', 1);
+    content = addLine(content, '* onmouseleave - pointer is moved out of an element', 1);
+    content = addLine(content, '* onmousemove - pointer is moving over an element', 1);
+    content = addLine(content, '* onmouseover - pointer is moved onto an element or its children', 1);
+    content = addLine(content, '* onmouseout - pointer is moved out of an element or its children', 1);
+    content = addLine(content, '* onmouseup - user releases a mouse button over an element', 1);
+    content = addLine(content, '2. Keyboard events:', 0, true);
+    content = addLine(content, '* onkeydown - user is pressing a key', 1);
+    content = addLine(content, '* onkeypressed - user presses a key', 1);
+    content = addLine(content, '* onkeyup - user releases a key', 1);
+    content = addLine(content, '3. Form events:', 0, true);
+    content = addLine(content, '* onblur - element loses focus', 1);
+    content = addLine(content, '* onfocus - element gets focus', 1);
+    content = addLine(content, '* onfocusout - element is about loosing focus', 1);
+    content = addLine(content, '* onfocusin - element is about getting focus', 1);
+    content = addLine(content, '4. Drag events (drag and drop events)', 0, true);
+    content = addLine(content, '5. Clipboard events (copy and paste events)', 0, true);
+    content = addLine(content, '6. Print events', 0, true);
+    content = addLine(content, '7. Media events (player events)', 0, true);
+    content = addLine(content, '8. Animation events', 0, true);
+    content = addLine(content, '9. Server-sent events', 0, true);
+    content = addLine(content, '10. Misc events', 0, true);
+    content = addLine(content, '11. Touch events (touch screen events)', 0, true);
+    return content;
+}

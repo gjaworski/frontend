@@ -1,0 +1,30 @@
+'use strict';
+function documentProperties() {
+    var content = '';
+    content = addLine(content, '1. Document properties:', 0, true);
+    content = addLine(content, 'document.anchors is ' + document.anchors + ' - all hyperlinks', 1);
+    content = addLine(content, 'document.applets is ' + document.applets + ' - all applets', 1);
+    content = addLine(content, 'document.baseURI is ' + document.baseURI, 1);
+    content = addLine(content, 'document.body is ' + document.body, 1);
+    content = addLine(content, 'document.cookie is ' + document.cookie, 1);
+    content = addLine(content, 'document.doctype is ' + document.doctype, 1);
+    content = addLine(content, 'document.documentElement is ' + document.documentElement, 1);
+    content = addLine(content, 'document.documentMode is ' + document.documentMode, 1);
+    content = addLine(content, 'document.documentURI is ' + document.documentURI, 1);
+    content = addLine(content, 'document.domain is ' + document.domain, 1);
+    content = addLine(content, 'document.embeds is ' + document.embeds + ' - all embeds', 1);
+    content = addLine(content, 'document.forms is ' + document.forms + ' - all forms', 1);
+    content = addLine(content, 'document.head is ' + document.head, 1);
+    content = addLine(content, 'document.images is ' + document.images + ' - all images', 1);
+    content = addLine(content, 'document.implementation is ' + document.implementation, 1);
+    content = addLine(content, 'document.inputEncoding is ' + document.inputEncoding, 1);
+    content = addLine(content, 'document.lastModified is ' + document.lastModified, 1);
+    content = addLine(content, 'document.links is ' + document.links, 1);
+    content = addLine(content, 'document.readyState is ' + document.readyState, 1);
+    content = addLine(content, 'document.referrer is ' + document.referrer, 1);
+    content = addLine(content, 'document.scripts is ' + document.scripts + ' - all scripts', 1);
+    content = addLine(content, 'document.strictErrorChecking is ' + document.strictErrorChecking, 1);
+    content = addLine(content, 'document.title is ' + document.title, 1);
+    content = addLine(content, 'document.URL is ' + document.URL, 1);
+    return content;
+}
