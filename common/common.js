@@ -15,3 +15,8 @@ function tab(numb) {
     }
     return tabs;
 }
+
+function addHyperlink(input, action, tabs) {
+    console.log(tab(tabs) + action);
+    return input + tab(tabs) + '<a href="#" onclick="' + action + '">' + action + '</a>\r\n';
+}

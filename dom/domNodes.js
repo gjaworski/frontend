@@ -1,0 +1,33 @@
+'use strict';
+function domNodes() {
+    var content = '';
+    content = addLine(content, '1. Everything in HTML document is node:', 0, true);
+    content = addLine(content, '* document node - entire document', 1);
+    content = addLine(content, '* element node - every HTML element in document', 1);
+    content = addLine(content, '* text node - texts inside HTML elements', 1);
+    content = addLine(content, '* attribute node - every HTML attribute in document', 1);
+    content = addLine(content, '* comment node - all comments in document', 1);
+    content = addLine(content, '2. Node relationships:', 0, true);
+    content = addLine(content, '* the top node is called root', 1);
+    content = addLine(content, '* every node has exactly one parent (except root)', 1);
+    content = addLine(content, '* every node can have a number of children', 1);
+    content = addLine(content, '* siblings are nodes with the same parent', 1);
+    content = addLine(content, '3. Node navigation properties:', 0, true);
+    content = addLine(content, '* parentNode', 1);
+    content = addLine(content, '* childNodes[nodeNumber]', 1);
+    content = addLine(content, '* firstChild', 1);
+    content = addLine(content, '* lastChild', 1);
+    content = addLine(content, '* nextSibling', 1);
+    content = addLine(content, '* previousSibling', 1);
+    content = addLine(content, '4. Text nodes manipulation:', 0, true);
+    var sandbox = document.getElementById('sandbox');
+    content = addHyperlink(content, 'sandbox.innerHTML=\'innerHTML\'', 1);
+    content = addHyperlink(content, 'sandbox.firstChild.nodeValue=\'firstChild\'', 1);
+    content = addHyperlink(content, 'sandbox.lastChild.nodeValue=\'lastChild\'', 1);
+    content = addHyperlink(content, 'sandbox.childNodes[0].nodeValue=\'childNodes\'', 1);
+    content = addLine(content, '5. nodeName property:', 0, true);
+    content = addHyperlink(content, 'sandbox.innerHTML=sandbox.nodeName', 1);
+    content = addLine(content, '6. nodeType property:', 0, true);
+    content = addHyperlink(content, 'sandbox.innerHTML=sandbox.nodeType', 1);
+    return content;
+}

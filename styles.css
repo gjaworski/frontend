@@ -1,16 +1,19 @@
-a {
+a.nav {
     font-size: 18px;
     font-family: "Times New Roman", Times, serif;
 }
 #container {
     display: flex;
+    height: 75vh;
 }
 #left {
     width: 30%;
     float: left;
+    overflow: scroll;
 }
 #right {
     width: 70%;
+    margin-left: 5px;
 }
 .clear {
     clear: both;
