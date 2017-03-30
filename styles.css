@@ -13,7 +13,8 @@ a.nav {
 }
 #right {
     width: 70%;
-    margin-left: 5px;
+    margin-left: 10px;
+    overflow: scroll;
 }
 .clear {
     clear: both;
